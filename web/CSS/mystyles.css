@@ -1,0 +1,49 @@
+.affix {
+    top: 20px;
+}
+
+p{
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    margin: 5% 0;
+    color: #AAA;
+    font-size: 1em;
+}
+
+.typo{
+    font-family: Verdana, Geneva, Arial, sans-serif;
+    margin: 5% 0;
+    color: #AAA;
+    font-size: 1em;
+}
+
+.btn.btn-sm{
+    border-radius: 15px;
+}
+
+/*@font-face{
+    font-family:MUSIC_light;
+    src: url(MUSIC_light.otf);
+}*/
+
+@font-face{
+    font-family: SomersetBarnyard;
+    src: url(SomersetBarnyard.otf);
+}
+
+#fos{
+    font-family: SomersetBarnyard;
+    color:#fff;
+    font-size: 80px;
+    text-align:center;
+    padding-top: 50px;
+}
+
+#auth{
+    color:#fff;
+     text-align:center;
+}
+
+.container-fluid{
+    background-color:steelblue; 
+    height:200px;
+}

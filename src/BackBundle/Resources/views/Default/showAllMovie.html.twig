@@ -1,0 +1,97 @@
+{# empty Twig template #}
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{parent()}}
+    {% block content %}
+        <table class='table table-hover table-condensed'>
+            <thead style="font-family: Verdana, Geneva, Arial, sans-serif;color: steelblue; font-size:0.5em;">
+                <tr>
+                    <th>FrTitre</th>
+                    <th>EnTitle</th>
+                    <th>Release Date</th>
+                    <th>Style</th>
+                    <th>Plot</th>
+                    <th>Running Time</th>
+                    <th>Screenplay</th>
+                    <th>Language</th>
+                    <th>OST Label</th>
+                </tr>
+            </thead>
+            <tbody style="font-family: Verdana, Geneva, Arial, sans-serif;color: #AAA; font-size:0.5em;">
+                {% for value in rows %}
+                    <tr>
+                        <td>{{value.enTitle}}</td>
+                        <td>{{value.frTitle}}</td>
+                        <td>{{value.releaseDate|date("Y-m-d")}}</td>
+                        <td>{{value.style}}</td>
+                        <td>{{value.plot[:50]}}</td>
+                        <td>{{value.runningTime|date('H:i:s')}}</td>
+                        <td>{{value.screenplay}}</td>
+                        <td>{{value.language}}</td>
+                       {# <td>{{value.soundtracks.label}}</td>#}
+                        {# boucle collection KO #}
+                        {% for val in value.companies %}
+                            <p>{{val.compagnyName}}</p>
+                        {% endfor %}
+                        <td><a class="btn btn-info show"><span class="glyphicon glyphicon-search "></span></a></td>
+                        <td><a class="btn btn-warning edit"><span class="glyphicon glyphicon-pencil "></span></a></td>
+                        <td><a class="btn btn-danger supp" data-confirm="Etes-vous certain de vouloir supprimer ce film?"><span class="glyphicon glyphicon-trash "></span></a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div id="1"></div>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script>
+            /* MODAL DE CONFIRMATION
+             * $(function () {
+             $('a[data-confirm]').click(function (e) {
+             var href = $(this).attr('href');
+             if (!$('#dataConfirmModal').length) {
+             $('body').append('<div id="dataConfirmModal" class="modal" role="dialog" aria-labelledby="dataConfirmLabel" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button><h3 id="dataConfirmLabel">Merci de confirmer</h3></div><div class="modal-body"></div><div class="modal-footer"><button class="btn" data-dismiss="modal" aria-hidden="true">Non</button><a class="btn btn-danger" id="dataConfirmOK">Oui</a></div></div></div></div>');
+             }
+             $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
+             $('#dataConfirmOK').attr('href', href);
+             $('#dataConfirmModal').modal({show: true});
+             return false;
+             });
+             });*/
+            $('.supp').click(function (e) {
+                e.preventDefault(e);
+                $.ajax({
+                    url: "{{ path('delete_Movie') }}",
+                    method: "post",
+                    data: {tag: $(this).parent().siblings(":first").text()}
+                }).done(function (arg) {
+                    console.log(arg);
+                    //alert("enregistrement supprimé");
+                    box.html("enregistrement supprimé");
+                });
+            });
+            $('.edit').click(function (e) {
+                e.preventDefault(e);
+                $.ajax({
+                    url: "{{ path('update_Movie') }}",
+                    method: "post",
+                    data: {tag: $(this).parent().siblings(":first").text()}
+                }).done(function (arg) {
+                    console.log(arg);
+                    $tab = JSON.parse(arg.data);
+                    console.log($tab);
+                    $.each($tab, function (index, element) {
+                        $.each(element, function (key, value) {
+                            $('#1').append("<p>" + value + "</p>");
+                        });
+                    });
+                });
+            });
+        </script>
+    {% endblock %}
+
+{% endblock %}
+
+
+

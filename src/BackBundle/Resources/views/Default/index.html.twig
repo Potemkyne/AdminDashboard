@@ -1,0 +1,19 @@
+{# empty Twig template #}
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{parent()}}
+    {% block content %}
+        {% for message in app.session.flashbag.get('msg') %}
+            <div class="alert alert-info alert-dismissable">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                <strong>Success!</strong> {{ message }}
+            </div>
+        {% endfor %}
+    {% endblock %}
+{% endblock %}
+
+
+
+
+

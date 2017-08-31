@@ -1,0 +1,10 @@
+{# empty Twig template #}
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{ parent() }}
+    {% block content %}
+        {{ form(form) }}
+    {% endblock %}
+{% endblock %}

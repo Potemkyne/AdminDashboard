@@ -1,0 +1,41 @@
+{# empty Twig template #}
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {{parent()}}
+    {% block content %}
+        <div class="form-group" >
+            <select class="form-control">
+                {% for val in rows %}
+                    {% for valeur in val %}
+                        <option> {{ valeur }}</option>
+                    {% endfor %}
+                {% endfor %}
+            </select>
+        </div> 
+        <div id="1"></div>
+    {% endblock %}
+
+    {% block javascripts %}
+        <script>
+
+            $('select').change(function (e) {
+                e.preventDefault(e);
+                $.ajax({
+                    url: "{{ path('extractAll_Ajax') }}",
+                    method: "post",
+                    data: {tag: $('select').val()}
+                }).done(function (arg) {
+                    $tab = JSON.parse(arg.data);
+                    $.each($tab, function (index, element) {
+                        $.each(element, function (key, value) {
+                            $('#1').append("<p>" + value + "</p>");
+                        });
+                    });
+                });
+            });
+        </script>
+    {% endblock %}
+
+
+{% endblock %}

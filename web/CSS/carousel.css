@@ -1,0 +1,33 @@
+.carousel-caption {
+    position:absolute;
+    margin-bottom: 200px;
+    right:55%;
+    padding: 30px;
+    left:10%;
+    z-index:10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: SUNN;
+    color:#fff;
+    font-size: 30px;
+    text-align:left;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.5);
+
+}
+.btn {
+    border-radius:0;
+    padding:10px 30px;
+}
+.btn.btn-warning{
+    background-color: darkslategray;
+    border-color: darkslategray;
+    color: black;
+    border-radius: 0px;
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+.im1{
+     font-size: 60px;
+}

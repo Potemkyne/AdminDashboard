@@ -1,0 +1,83 @@
+home:
+    path:     /
+    defaults: { _controller: BackBundle:Default:index }
+
+showAll_Movie:
+    path:     /showAllMovie
+    defaults: { _controller: BackBundle:Default:showAllMovie } 
+    
+insert_movie:
+    path:     /insertMovie
+    defaults: { _controller: BackBundle:Default:insertMovie }
+
+insert_cast:
+    path:     /insertCast
+    defaults: { _controller: BackBundle:Default:insertCast }  
+    
+insert_soundtracks:
+    path:     /insertSoundtracks
+    defaults: { _controller: BackBundle:Default:insertSoundtracks }
+    
+insert_credit:
+    path:     /insertCredit
+    defaults: { _controller: BackBundle:Default:insertCredit }
+    
+insert_gallery:
+    path:     /insertGallery
+    defaults: { _controller: BackBundle:Default:insertGallery }
+    
+insert_award:
+    path:     /insertAward
+    defaults: { _controller: BackBundle:Default:insertAward }
+    
+insert_compagny:
+    path:     /insertCompagny
+    defaults: { _controller: BackBundle:Default:insertCompagny }
+    
+insert_markers:
+    path:     /insertMarkers
+    defaults: { _controller: BackBundle:Default:insertMarkers }
+
+    
+extractAll_Ajax:
+    path:     /extractAllAjax
+    defaults: { _controller: BackBundle:Default:extractAllAjax }  
+    
+extract_Dbal:
+    path:     /extractDbal
+    defaults: { _controller: BackBundle:Default:extractDbal } 
+
+show_carousel:
+    path:     /showCarousel
+    defaults: { _controller: BackBundle:Default:showCarousel } 
+    
+showAllDQL_Movie:
+    path:     /showAllDQLMovie
+    defaults: { _controller: BackBundle:Default:showAllDQLMovie } 
+
+showAllDbal_Movie:
+    path:     /showAllDbalMovie
+    defaults: { _controller: BackBundle:Default:showAllDbalMovie } 
+
+showAll_Markers:
+    path:     /showAllMarkers
+    defaults: { _controller: BackBundle:Default:showAllMarkers } 
+
+delete_Movie:
+    path:     /deleteMovie
+    defaults: { _controller: BackBundle:Default:deleteMovie } 
+    
+update_Movie:
+    path:     /updateMovie
+    defaults: { _controller: BackBundle:Default:updateMovie } 
+    
+        
+test:
+    path:     /test
+    defaults: { _controller: BackBundle:Default:test} 
+        
+        
+    
+    
+    
+   

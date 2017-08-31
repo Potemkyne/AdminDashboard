@@ -1,0 +1,54 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    {{ parent() }}
+    {% block content %}
+        {% form_theme form 'jquery.collection.html.twig' %}
+        {{ form(form) }}
+        {#<a href="#" id="add_compagny" class="btn btn-default ">add compagny</a>#}
+    {% endblock %}
+    {% block javascripts %}
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/jquery.collection.js') }}"></script>
+        <script type="text/javascript">
+            $('.my-selector').collection();
+        </script>
+        {#
+        <script>
+            $(function () {
+                var $container = $('div#backbundle_movie_companies');
+                var index = $container.find(':input').length;
+                $('#add_compagny').click(function (e) {
+                    addCompagny($container);
+                    e.preventDefault();
+                });
+                if (index == 0) {
+                    addCompagny($container);
+                } else {
+                    $container.children('div').each(function () {
+                        addDeleteLink($(this));
+                    });
+                }
+                function addCompagny($container) {
+                    var template = $container.attr('data-prototype')
+                            .replace('__name__label__', 'Compagny n°' + (index + 1))
+                            .replace('__name__', index);
+                    var $prototype = $(template);
+                    addDeleteLink($prototype);
+                    $container.append($prototype);
+                    index++;
+                }
+                function addDeleteLink($prototype) {
+                    var $deleteLink = $('<a href="#" class="btn btn-danger">delete compagny</a>');
+                    $prototype.append($deleteLink);
+                    $deleteLink.click(function (e) {
+                        $prototype.remove();
+                        e.preventDefault();
+                        return false;
+                    });
+                }
+            });
+        </script>
+    #}
+    {% endblock %}
+
+{% endblock %}
