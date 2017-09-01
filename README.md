@@ -1,70 +1,22 @@
-Symfony Standard Edition
-========================
-
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
-
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
-
-What's inside?
---------------
-
-The Symfony Standard Edition is configured with the following defaults:
-
-  * An AppBundle you can use to start coding;
-
-  * Twig as the only configured template engine;
-
-  * Doctrine ORM/DBAL;
-
-  * Swiftmailer;
-
-  * Annotations enabled for everything.
-
-It comes pre-configured with the following bundles:
-
-  * **FrameworkBundle** - The core Symfony framework bundle
-
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
-
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.2/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.2/doctrine.html
-[8]:  https://symfony.com/doc/3.2/templating.html
-[9]:  https://symfony.com/doc/3.2/security.html
-[10]: https://symfony.com/doc/3.2/email.html
-[11]: https://symfony.com/doc/3.2/logging.html
-[12]: https://symfony.com/doc/3.2/assetic/asset_management.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-"# AdminDashboard" 
+<h1>Panneau d'administration - Gestion d'une filmographie</h1>
+<h2>FOSUserBundle</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949091-b3af0cb6-8eb2-11e7-963e-596bfa4d2555.jpg"/>
+<h2>Movie List</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949071-977a2cba-8eb2-11e7-8b2e-32de39467f24.jpg"/>
+<ul>
+<li>Delete ==> done</li>
+<li>Update ==> todo</li>
+</ul>
+<h2>Add Movie</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949077-9f953c14-8eb2-11e7-8c68-0c60f3ee499e.jpg"/>
+<img src="https://user-images.githubusercontent.com/14042789/29949081-a54ed46c-8eb2-11e7-8fec-0eb55d58dad9.jpg"/>
+<h2>Add Cast</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949096-bd24e0ea-8eb2-11e7-9d73-f82e6bfdca3d.jpg"/>
+<h2>Add Gallery</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949101-c509a28c-8eb2-11e7-97fc-f297388c825d.jpg"/>
+<h2>Add Award</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949106-c945a9d6-8eb2-11e7-9c62-f861cf7d4d84.jpg"/>
+<h2>Add Location</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29949108-ce9c8256-8eb2-11e7-9858-e3b398381b42.jpg"/>
+<h2>Display a movie plot as response to an ajax request</h2>
+<img src="https://user-images.githubusercontent.com/14042789/29950008-3eff6e5e-8eb9-11e7-919e-b904d2f71346.jpg"/>
